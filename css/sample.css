@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  font-size: 32px;
+  border: solid;
+  /* background-color: #0066cc; */
+}
+header {
+  color: white;
+  background-color: black;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+  display: flex;
+  justify-content: start;
+}
+
+h3 {
+  margin: 0 0;
+  font-family: chalkduster;
+  letter-spacing: 5px;
+  padding: 12px 20px;
+  font-size: 20px;
+}
+
+main {
+  /* border-bottom: 1px solid #ccc; */
+}
+footer {
+  background-color: #fff;
+  /* border-bottom: 1px solid #ccc; */
+  text-align: center;
+  margin-top: 30px;
+}
+p {
+  font-size: 200%;
+  text-align: center;
+  border-bottom: 1px solid #fff;
+  height: 200px;
+}
+ul {
+  padding: 0;
+  border-top: 1px solid #000000;
+  display: table; /* 定義 */
+  table-layout: fixed;
+  width: 100%;
+}
+li {
+  text-align: center;
+  list-style-type: none;
+  border: 1px solid #666;
+  background-color: #fff;
+  display: table-cell; /* 定義 */
+  cursor: pointer;
+}
+li:hover {
+  background: #0066cc;
+  color: #fff;
+}
+
+img {
+  width: 200px;
+  /* padding: 100px 0; */
+  /* border-radius: 50%; */
+}
+
+div.cp {
+  display: inline;
+  /* justify-content: center; */
+  text-align: center;
+}
+
+#judgment {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+.a {
+  /* margin-top: 10px;
+  border: solid; */
+}
+
+.ca {
+  border: solid;
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  font-family: ヒラギノ角ゴシック;
+}
+
+h6 {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: ヒラギノ角ゴシック;
+  justify-content: end;
+  display: flex;
+  padding: 5px 10px;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    /* background-color: red; */
+    font-size: 16px;
+  }
+  img {
+    width: 100px;
+    /* height: 85px; */
+  }
+}
+
+/* 基本CSSの要素は広いから狭い、上から下に聞く */

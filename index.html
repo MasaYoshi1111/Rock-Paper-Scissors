@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/jquery-2.1.3.min.js"></script>
+    <link rel="stylesheet" href="css/sample.css" />
+    <link rel="icon" href="img/aiko.jpg" id="favicon" />
+    <title>じゃんけん</title>
+  </head>
+  <body>
+    <!-- 音の設定 -->
+    <audio id="audio">
+      <source src="audio/pon.mp3" type="audio/mp3" />
+    </audio>
+
+    <header>
+      <h3>Rock Paper Scissors</h3>
+    </header>
+
+    <main>
+      <h2>あなたはなにを出しますか？</h2>
+      <ul>
+        <li id="gu_btn"><img src="img/jg.png" alt="" /></li>
+        <li id="cho_btn"><img src="img/jc.png" alt="" /></li>
+        <li id="par_btn"><img src="img/jp.png" alt="" /></li>
+      </ul>
+      <div class="cp">
+        <div class="ca">
+          <h2>コンピュータの出した手は？</h2>
+          <div id="pc_hands"></div>
+        </div>
+      </div>
+      <div class="a">
+        <h2>結果は、、、</h2>
+        <div id="judgment"></div>
+      </div>
+    </main>
+
+    <footer>
+      <h6>©️ G's ACADEMY</h6>
+    </footer>
+
+    <script>
+      // 音が鳴るJS
+      $("#gu_btn").on("click", function audio() {
+        document.getElementById("audio").currentTime = 0; //連続クリックに対応
+        document.getElementById("audio").play(); //クリックしたら音を再生
+      });
+      $("#par_btn").on("click", function audio() {
+        document.getElementById("audio").currentTime = 0; //連続クリックに対応
+        document.getElementById("audio").play(); //クリックしたら音を再生
+      });
+      $("#cho_btn").on("click", function audio() {
+        document.getElementById("audio").currentTime = 0; //連続クリックに対応
+        document.getElementById("audio").play(); //クリックしたら音を再生
+      });
+
+      //じゃんけん用のSCRIPTを書いてください
+      $("#gu_btn").on("click", function () {
+        const r = Math.ceil(Math.random() * 3);
+        console.log(r);
+        if (r == 1) {
+          $("#judgment").html('<img src="img/aiko.jpg" >');
+        } else if (r == 2) {
+          $("#judgment").html('<img src="img/kachi.avif" >');
+        } else if (r == 3) {
+          $("#judgment").html('<img src="img/make.webp" >');
+        }
+        if (r == 1) {
+          $("#pc_hands").html('<img src="img/jg.png" >');
+        } else if (r == 2) {
+          $("#pc_hands").html('<img src="img/jc.png" >');
+        } else if (r == 3) {
+          $("#pc_hands").html('<img src="img/jp.png" >');
+        }
+      });
+      // グローバル変数とブロック変数に気をつける
+
+      $("#cho_btn").on("click", function () {
+        const r = Math.ceil(Math.random() * 3);
+        console.log(r);
+        if (r == 1) {
+          $("#judgment").html('<img src="img/aiko.jpg" >');
+        } else if (r == 2) {
+          $("#judgment").html('<img src="img/kachi.avif" >');
+        } else if (r == 3) {
+          $("#judgment").html('<img src="img/make.webp" >');
+        }
+        if (r == 1) {
+          $("#pc_hands").html('<img src="img/jc.png" >');
+        } else if (r == 2) {
+          $("#pc_hands").html('<img src="img/jp.png" >');
+        } else if (r == 3) {
+          $("#pc_hands").html('<img src="img/jg.png" >');
+        }
+      });
+
+      $("#par_btn").on("click", function () {
+        const r = Math.ceil(Math.random() * 3);
+        console.log(r);
+        if (r == 1) {
+          $("#judgment").html('<img src="img/aiko.jpg" >');
+        } else if (r == 2) {
+          $("#judgment").html('<img src="img/kachi.avif" >');
+        } else if (r == 3) {
+          $("#judgment").html('<img src="img/make.webp" >');
+        }
+        if (r == 1) {
+          $("#pc_hands").html('<img src="img/jp.png" >');
+        } else if (r == 2) {
+          $("#pc_hands").html('<img src="img/jg.png" >');
+        } else if (r == 3) {
+          $("#pc_hands").html('<img src="img/jc.png" >');
+        }
+      });
+
+      // アラートの練習を表示
+      // \はoptionと￥
+      alert("10月17日（木）\n本日もよろしくお願いします！！");
+    </script>
+  </body>
+</html>
